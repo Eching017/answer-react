@@ -1,0 +1,76 @@
+.my-card {
+  width: 300px;
+  height: 400px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px #8f71a1;
+  overflow: hidden;
+  transform: scale(1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease;
+}
+
+.my-card.hovered {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+  background-image: linear-gradient(to right, #85c4de, #d5a6f0);
+}
+
+.__content {
+  padding: 20px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.5s ease-out forwards;
+}
+
+.__title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.__description {
+  font-size: 16px;
+  color: #777;
+}
+
+.__details {
+  font-size: 22px;
+  color: #ffffff;
+  transition: opacity 0.3s ease;
+  opacity: 1;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.__loading-spinner {
+  text-align: center;
+  font-size: 18px;
+  color: #333;
+  margin-top: 150px;
+}
+
+@media (max-width: 768px) {
+  .my-card {
+    width: 100%;
+    height: auto;
+  }
+
+  .__content {
+    padding: 15px;
+  }
+
+  .__title {
+    font-size: 1.5rem;
+  }
+}

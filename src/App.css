@@ -1,0 +1,17 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.my-card {
+  padding: 2em;
+  margin: .5rem;
+}
+
+.my-card-container {
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+}
